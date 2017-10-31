@@ -1,0 +1,63 @@
+<ons-page ng-controller="menu1Ctr" id="menu1Page">
+    <article class="container" style="text-align: center">
+        <h4>スライドメニュー1</h4>
+        <p style="text-align: center; margin-top: 10px">
+            <ons-search-input placeholder="検索"></ons-search-input>
+        </p>
+        <ons-list>
+            <ons-list-header>チェックボックス</ons-list-header>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-checkbox input-id="check-1" ng-model="page.apples"></ons-checkbox>
+                </label>
+                <label for="check-1" class="center">
+                    リンゴ <span ng-show="page.apples" style="color: red; margin-left: 6px">♥</span>
+                </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-checkbox input-id="check-2" ng-model="page.bananas"></ons-checkbox>
+                </label>
+                <label for="check-2" class="center">
+                    バナナ <span ng-show="page.bananas" style="color: red; margin-left: 6px">♥</span>
+                </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-checkbox input-id="check-2" ng-model="page.greap"></ons-checkbox>
+                </label>
+                <label for="check-3" class="center">
+                    ブドウ <span ng-show="page.greap" style="color: red; margin-left: 6px">♥</span>
+                </label>
+            </ons-list-item>
+        </ons-list>
+        <ons-list>
+            <ons-list-header>ラジオボタン<span ng-style="page.labelStyle"></span></ons-list-header>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-radio name="color" input-id="radio-1" ng-model="page.labelStyle.backgroundColor" value="red"></ons-radio>
+                </label>
+                <label for="radio-1" class="center">
+                    赤
+                </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-radio name="color" input-id="radio-2" ng-model="page.labelStyle.backgroundColor" value="blue"></ons-radio>
+                </label>
+                <label for="radio-2" class="center">
+                    青
+                </label>
+            </ons-list-item>
+            <ons-list-item tappable>
+                <label class="left">
+                    <ons-radio name="color" input-id="radio-3" ng-model="page.labelStyle.backgroundColor" value="blue"></ons-radio>
+                </label>
+                <label for="radio-2" class="center">
+                    黄
+                </label>
+            </ons-list-item>
+        </ons-list>
+        <ons-button>決定ボタン</ons-button>
+    </article>
+</ons-page>

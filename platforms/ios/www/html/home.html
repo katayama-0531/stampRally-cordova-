@@ -1,0 +1,16 @@
+<!--ホーム画面-->
+<ons-page ng-controller="homeCtr" id="homePage">
+    <article class="container" style="text-align: center; overflow: hidden;">
+        <h3>ホーム画面</h3>
+        <p id="loginName"></p>
+        <p ons-if-platform="ios">iPhoneまたはiPadでアプリ使用中</p>
+        <p ons-if-platform="Android">Androidでアプリ使用中</p>
+        <!--<div id="listView" style="position: absolute; bottom: 0;">
+            <!--<ons-list>
+                <ons-list-item class="list__item--tappable list__item__line-height" ons-lazy-repeat="MyDelegate">
+                    {{ item }}
+                </ons-list-item>
+            </ons-list>
+        </div>-->
+    </article>
+</ons-page>

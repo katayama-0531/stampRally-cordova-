@@ -1,0 +1,23 @@
+<ons-page ng-controller="tab2Ctr" id="tab2Page">
+    <article class="container" style="text-align: center; overflow: hidden;">
+        <h4>メモ</h4>
+        <ons-row height="20%">
+            <ons-col width="80%">
+                <textarea id="memo" style="width: 95%; height:50%;" ng-model="memoTextarea" ng-change="editChange()" autofocus></textarea>
+            </ons-col>
+            <ons-col width="20%">
+                <ons-button modifier="cta" id="save" ng-click="save()" type="button" class="button">保存</ons-button>
+            </ons-col>
+        </ons-row>
+        <div class="container" style="bottom: 0; height:85%; overflow: auto;">
+            <ons-list id="memoList">
+                <ons-gesture-detector>
+                    <ons-list-item class="list__item--tappable list__item__line-height" ng-attr-id="{{id}}" ons-lazy-repeat="ItemListDelegate" ng-click="listTouch(id)">
+                        <ons-icon icon="fa-trash"></ons-icon>
+                        {{ memo }}
+                    </ons-list-item>
+                </ons-gesture-detector>
+            </ons-list>
+        </div>
+    </article>
+</ons-page>

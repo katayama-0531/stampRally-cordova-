@@ -1,0 +1,9 @@
+<!--QRコード読込画面-->
+<ons-page ng-controller="qrCtr" id="qrScanPage">
+    <article class="container" style="text-align: center">
+        <h3>QRコードを読み込みます。</h3>
+        <ons-button id="scanButton" type="button" ng-click="getQRCode()">読み込む</ons-button>
+        <div id="resultMessage">ここに結果が表示されます。</div>
+        <iframe class="iframe" id="resultFrame" scr="https://goo.gl/maps/zUNML9jJUVC2" frameborder="1" width="600" height="480"></iframe>
+    </article>
+</ons-page>

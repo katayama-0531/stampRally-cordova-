@@ -1,0 +1,13 @@
+<!--メモ詳細画面-->
+<ons-page ng-controller="memoCtr" id="memoPage">
+    <ons-toolbar id="title">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" id="memoTitle"></div>
+    </ons-toolbar>
+    <article class="container" style="text-align: center;">
+        <textarea id="description"></textarea>
+        <ons-button ng-click="reSave()">保存</ons-button>
+    </article>
+</ons-page>

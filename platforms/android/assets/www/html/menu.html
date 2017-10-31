@@ -1,0 +1,36 @@
+<ons-page ng-controller="listitemCtr">
+    <ons-toolbar id="title">
+        <div class="left">
+            <ons-toolbar-button ng-click="slidingMenu.menu.toggle('html/menu.html')">
+                <ons-icon icon="fa-info-circle" style="font-size: 32px; width: 1em;"></ons-icon>
+                <!--バッジの表示-->
+                <span class="notification badgeToolbar" ng-show="menuCount > 0">{{menuCount}}</span>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">スタンプラリーアプリ</div>
+    </ons-toolbar>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="250px" var="slidingMenu.menu" collapse swipeable>
+            <ons-page>
+                <ons-list id="menuList" model="table">
+                    <ons-list-item modifier="tappable" class="list__item__line-height" ng-click="topClick($index)">
+                        <ons-icon icon="fa-home" style="color: #666"></ons-icon> &nbsp; Page 1
+                    </ons-list-item>
+                    <ons-list-item modifier="tappable" class="list__item__line-height" ng-click="secondClick()">
+                        <ons-icon icon="fa-gear" style="color: #666"></ons-icon> &nbsp; Page 2
+                    </ons-list-item>
+                    <ons-list-item modifier="tappable" class="list__item__line-height" ng-click="thirdClick()">
+                        <ons-icon icon="fa-hand-o-right" style="color: #666"></ons-icon> &nbsp; 写真マスク(canvas5枚)
+                    </ons-list-item>
+                    <ons-list-item modifier="tappable" class="list__item__line-height" ng-click="third1Click()">
+                        <ons-icon icon="fa-hand-o-right" style="color: #666"></ons-icon> &nbsp; 写真マスク(canvas1枚)
+                    </ons-list-item>
+                    <ons-list-item modifier="tappable" class="list__item__line-height" ng-click="fourthClick()">
+                        <ons-icon icon="fa-arrow-circle-right" spin="yes" style="color: #666"></ons-icon> &nbsp; マスク写真一覧
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="html/top.html"></ons-splitter-content>
+    </ons-splitter>
+</ons-page>
