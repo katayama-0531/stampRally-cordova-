@@ -1,45 +1,9 @@
+var memoListItem = new Array();
 app.controller('tab2Ctr', function($scope, $timeout, $element) {
     //メモ画面のコントローラー
     save.disabled = true;
-    //保存されているメモのリスト
-    var memoListItem = localStorage.getItem('memo');
-    //削除インデックス
-    var delindex = 0;
-    if (memoListItem != null && memoListItem.length >= 1) {
-        //Jsonで保存されているのでパースする
-        memoListItem = JSON.parse(localStorage.getItem('memo'));
-    };
-
-    var itemCount = 0;
-    $scope.ItemListDelegate = {
-        configureItemScope: function(index, itemScope) {
-            if (!itemScope.memo) {
-                //console.log('Item #' + (index + 1) + '作成');
-                itemScope.memo = memoListItem[index].dataTime;
-                itemScope.id = "listitem" + index;
-            }
-            return itemScope.memo;
-        },
-
-        countItems: function() {
-            // Return number of items.
-            if (memoListItem) {
-                itemCount = memoListItem.length;
-            }
-            return itemCount;
-        },
-
-        calculateItemHeight: function(index) {
-            // Return the height of an item in pixels.
-            return 44;
-        },
-
-        destroyItemScope: function(index, itemScope) {
-            // Optional method that is called when an item is unloaded.
-            //console.log('Item #' + (index + 1) + '削除');
-        }
-    };
-
+    memoListCreate($scope);
+    
     $scope.listTouch = function(arg) {
         var itemNum = arg.substr(8);
         var options = {
@@ -61,7 +25,6 @@ app.controller('tab2Ctr', function($scope, $timeout, $element) {
             });
         }
     });
-    
     //保存ボタンタッチ
     $scope.save = function() {
         if (memo.value) {
@@ -94,4 +57,51 @@ app.controller('tab2Ctr', function($scope, $timeout, $element) {
         }
     }
 
+    tab2Page.addEventListener('show', function() {
+        memoListCreate($scope);
+    });
+
 });
+
+//メモリスト表示
+function memoListCreate($scope){
+    //保存されているメモのリスト
+    memoListItem = localStorage.getItem('memo');
+    //削除インデックス
+    var delindex = 0;
+    if (memoListItem != null && memoListItem.length >= 1) {
+        //Jsonで保存されているのでパースする
+        memoListItem = JSON.parse(localStorage.getItem('memo'));
+    };
+    console.log(memoListItem);
+
+    var itemCount = 0;
+    $scope.ItemListDelegate = {
+        configureItemScope: function(index, itemScope) {
+            if (!itemScope.memo) {
+                //console.log('Item #' + (index + 1) + '作成');
+                itemScope.memo = memoListItem[index].dataTime;
+                itemScope.id = "listitem" + index;
+            }
+            return itemScope.memo;
+        },
+
+        countItems: function() {
+            // Return number of items.
+            if (memoListItem) {
+                itemCount = memoListItem.length;
+            }
+            return itemCount;
+        },
+
+        calculateItemHeight: function(index) {
+            // Return the height of an item in pixels.
+            return 44;
+        },
+
+        destroyItemScope: function(index, itemScope) {
+            // Optional method that is called when an item is unloaded.
+            //console.log('Item #' + (index + 1) + '削除');
+        }
+    };
+}

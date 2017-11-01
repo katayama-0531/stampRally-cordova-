@@ -86,7 +86,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		DC+zZWRlo8sa7KEcuBhRxahJxSo=
+		WfYGB8Bhqnf71nRLRxe3rFSj1CY=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		LoEutfLvoIiOhhPPjgwQZxUTcxQ=
+		2/ZTWhWQvf6E0PGIUXJeVAUZVWQ=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		rjPOGQeJsCi7DS4TQsrSqenfxHU=
+		+B0WueKXt0H1W+4CYPB0eyvPN/c=
 		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		moY8fi1rKTFNMSoQmigBEln5hQE=
+		7HLPjJMS162nQBBjs16S1XtNf/k=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		6a/sYoKf4a2CC3WKy8+mlONdWw0=
+		g2a7ti5TG17rQznZHVoqzqY8wfw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -194,7 +194,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		j+UETpw+G/245p+i3CQZYaNB47M=
+		1cuQ0k/5NTpB6SjP8VtHhe6qz64=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		tqinXT05CSvXoBX2/r63Vmu7qts=
+		uS9D4xWUDtd82qpMSD5X/cHH2yc=
 		</data>
 		<key>www/cordova-js-src/exec.js</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		zmMCvTLrmOhys7Daur1cT/eqm3M=
+		SO8beNPv4utZkQqnmHd/4k0jIoQ=
 		</data>
 		<key>www/css/animate.css</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>www/html/home.html</key>
 		<data>
-		o5utNmiVhn92qR7GG9F3VXyP/UI=
+		qiDLx740c8wcXrHxyn869EK/A4Q=
 		</data>
 		<key>www/html/login.html</key>
 		<data>
@@ -318,7 +318,7 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		LDQVfSZhL3kSilBFiTC4FbwDl4o=
+		8hS3/3a+fjJS7OBsTGy03e4KCjg=
 		</data>
 		<key>www/js/camera.js</key>
 		<data>
@@ -326,11 +326,11 @@
 		</data>
 		<key>www/js/home.js</key>
 		<data>
-		70Whls2lf+oatJQ7MySGIzkY1RA=
+		jhCQbh9ipndPeZHR0yuPQeKJqaE=
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		UMK3lYMILUBWsw9QV6360w0ygB8=
+		Xvm9l9EI1IS3QzuBK59uS2WogMM=
 		</data>
 		<key>www/js/listItem.js</key>
 		<data>
@@ -338,11 +338,11 @@
 		</data>
 		<key>www/js/login.js</key>
 		<data>
-		K7o1bKi77oGXXGg57dIFoOCP6Cs=
+		V3MLA2jfjdN2cwBFLXWAYcCCWKg=
 		</data>
 		<key>www/js/memo.js</key>
 		<data>
-		2h70Z9s84pjE25NXt0KYrf5Ounk=
+		N+4oaGlaLkjsew0FJ3TcddcDTTg=
 		</data>
 		<key>www/js/menu1.js</key>
 		<data>
@@ -374,7 +374,7 @@
 		</data>
 		<key>www/js/tab2.js</key>
 		<data>
-		UphnMYtJiAb8mEUUsi8JEljv1/4=
+		EEPO9mcs8dzll0rwl0zO6Xm35lI=
 		</data>
 		<key>www/js/util/b64utils.js</key>
 		<data>
@@ -1300,6 +1300,10 @@
 		<data>
 		DvdKsimaD0orfD/E5k55i1LiN80=
 		</data>
+		<key>www/plugins/code-push/script/acquisition-sdk.js</key>
+		<data>
+		RIOX1S+2u8pDGxIpwoM3DDauCCQ=
+		</data>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
 		<data>
 		SIYzAGOWUrafT4SXCVCSdpiOQaw=
@@ -1316,6 +1320,50 @@
 		<data>
 		BGPJLreG2O+OYfIg0g0vbA3c7FM=
 		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/codePush.js</key>
+		<data>
+		OWyqtbj5ryhQ5Ye+QkN/sGMvBnc=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/codePushUtil.js</key>
+		<data>
+		HDEtzeLAyolw4I3QBr+U4OhcCiY=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/fileUtil.js</key>
+		<data>
+		vcTZja0TdX49UaXG6COAZPsZmI8=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/httpRequester.js</key>
+		<data>
+		h1K4LsH8cuwD85wno94OQ13Iozw=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/installMode.js</key>
+		<data>
+		yoNmBDWdom/f0UOJEp+IJzRXtQ4=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/localPackage.js</key>
+		<data>
+		c+kl+gCkdyVokANfA7H/+VKG8YU=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/nativeAppInfo.js</key>
+		<data>
+		y3BY5mygHGABbwVfxhhthivBOX4=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/package.js</key>
+		<data>
+		fod4qmsHaW5PpWFw8Q1k2aTDS60=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/remotePackage.js</key>
+		<data>
+		7IJrAKAY59/5GnnSzDQ3+nItfME=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/sdk.js</key>
+		<data>
+		05rUAWr3Rg1D8GQPwBCtdkybbRk=
+		</data>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/syncStatus.js</key>
+		<data>
+		eN69I0j7uFNMxmTbNE1EjQgLzKc=
+		</data>
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<data>
 		DgD9WKGqlbNViEZBSi4Wenbl/uM=
@@ -1323,6 +1371,14 @@
 		<key>www/plugins/cordova-plugin-dialogs/www/notification.js</key>
 		<data>
 		BNzKfnkg7V/kfNCQoys8B0lNxu0=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransfer.js</key>
+		<data>
+		+oP039n6GJu1fs54+QP0yTJsiHA=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransferError.js</key>
+		<data>
+		CwhFDysdKn06qN1rH2TPGUOpb8U=
 		</data>
 		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
 		<data>
@@ -1427,6 +1483,10 @@
 		<key>www/plugins/cordova-plugin-geolocation/www/geolocation.js</key>
 		<data>
 		DBMSf1DRKjXfKMDgaSJHjnx+wgI=
+		</data>
+		<key>www/plugins/cordova-plugin-zip/zip.js</key>
+		<data>
+		Xc5zQqEDKOGmgElLM6ZuOIUg5ww=
 		</data>
 		<key>www/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js</key>
 		<data>
@@ -1659,11 +1719,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DC+zZWRlo8sa7KEcuBhRxahJxSo=
+			WfYGB8Bhqnf71nRLRxe3rFSj1CY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+S6i8F1NhgAqjihb8A+sjdnit+fzw9MnznbHUCVOojk=
+			AMj30hs56ZAO/gotXQSJlTIfJwWfqLejichSTL67XIo=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -1714,11 +1774,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LoEutfLvoIiOhhPPjgwQZxUTcxQ=
+			2/ZTWhWQvf6E0PGIUXJeVAUZVWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			f+EYEh8sZxRxb8FeXGvep6DwvSW3FLdKROxeP2Gm+kQ=
+			ZB5r4VTuL1oii4Koo9aHy5RAh269YEMg1QhouY0O7S8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -1736,11 +1796,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rjPOGQeJsCi7DS4TQsrSqenfxHU=
+			+B0WueKXt0H1W+4CYPB0eyvPN/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			5ll33ODAIh7C5GvOb1Ck2tGZA0DZSmCbQ7g7K2YgvwA=
+			RnrgQHnNZbfL/gBOZxDpkjZSKfx2Btn7YIF4BtMAagM=
 			</data>
 		</dict>
 		<key>CDVNotification.bundle/beep.wav</key>
@@ -1912,11 +1972,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6a/sYoKf4a2CC3WKy8+mlONdWw0=
+			g2a7ti5TG17rQznZHVoqzqY8wfw=
 			</data>
 			<key>hash2</key>
 			<data>
-			brGzAf3KFpHIXHdjS6nXEGZVY1SOrQF2tYq4DYecbNs=
+			BaMdzmQd5GxPBiOtFyKjWgXl23RDpLSFGHQq+nXODEo=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -1934,11 +1994,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j+UETpw+G/245p+i3CQZYaNB47M=
+			1cuQ0k/5NTpB6SjP8VtHhe6qz64=
 			</data>
 			<key>hash2</key>
 			<data>
-			//jF6jsfwrRlH0Lfpilhgugl0P3uV3Y7sIhTgawmTgE=
+			4XgtaGyQHq1Kxafi1OX91LZRwAr7pp31DXc06Rf84rQ=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -1956,11 +2016,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tqinXT05CSvXoBX2/r63Vmu7qts=
+			uS9D4xWUDtd82qpMSD5X/cHH2yc=
 			</data>
 			<key>hash2</key>
 			<data>
-			b9O4pnZ37lK2gP1iMIpkC8aIa1w4UkD5t04L2MWb3Sg=
+			GJVH3aYJiIL145nO3KrRgVU3zKEmlEsmuwlsecckAH4=
 			</data>
 		</dict>
 		<key>www/cordova-js-src/exec.js</key>
@@ -2022,11 +2082,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zmMCvTLrmOhys7Daur1cT/eqm3M=
+			SO8beNPv4utZkQqnmHd/4k0jIoQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AEl6hf90x+OlZgNDtU1Li2L0aEw9NMwZXOjFP9pYMCA=
+			tw48nfPJka3WbUTvzog2DpplqMcXjfAMzBUGM2L8Kxw=
 			</data>
 		</dict>
 		<key>www/css/animate.css</key>
@@ -2077,11 +2137,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o5utNmiVhn92qR7GG9F3VXyP/UI=
+			qiDLx740c8wcXrHxyn869EK/A4Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lm838n28vRL48BfNhQMxkzp4pl9QENEgTwWeJrRGi2c=
+			5oN2cBO/in+Jtz4cNg+AiZR18GYyU2UCWoL0kdGV7uU=
 			</data>
 		</dict>
 		<key>www/html/login.html</key>
@@ -2275,11 +2335,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LDQVfSZhL3kSilBFiTC4FbwDl4o=
+			8hS3/3a+fjJS7OBsTGy03e4KCjg=
 			</data>
 			<key>hash2</key>
 			<data>
-			6md7HkduB63TKFuOFEs3e4wLBNKnZdiTbgOQewyRyd8=
+			J62XDOIKaJJDaikAuhBk9mHq13sxFHAkhQYX6+zwdCs=
 			</data>
 		</dict>
 		<key>www/js/camera.js</key>
@@ -2297,22 +2357,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			70Whls2lf+oatJQ7MySGIzkY1RA=
+			jhCQbh9ipndPeZHR0yuPQeKJqaE=
 			</data>
 			<key>hash2</key>
 			<data>
-			H2gn6e7jYVmH6iZhvbADl/6HedgI/NHHGk5cwr2OiJE=
+			7kN9/tlv2L5ZfoKaB5mOWo2fVXVsjsCRjJIfb/OKdzQ=
 			</data>
 		</dict>
 		<key>www/js/index.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UMK3lYMILUBWsw9QV6360w0ygB8=
+			Xvm9l9EI1IS3QzuBK59uS2WogMM=
 			</data>
 			<key>hash2</key>
 			<data>
-			4TpTwtSIJXp9g7HQxDUPu774PEkGsi7dTMfoV+2g6Z4=
+			JaMHWvbDL19ROABzxaMRfhzi/cbK9cKAOPUFIZ+PQ/0=
 			</data>
 		</dict>
 		<key>www/js/listItem.js</key>
@@ -2330,22 +2390,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K7o1bKi77oGXXGg57dIFoOCP6Cs=
+			V3MLA2jfjdN2cwBFLXWAYcCCWKg=
 			</data>
 			<key>hash2</key>
 			<data>
-			l5LU+uNbsYg24a00ppRo7jnwAz0Vb4YTTJiFzbL21HU=
+			DBXCjxTezZtXicyYrFwxI4abI31ykRXJoRXQxqk1ulU=
 			</data>
 		</dict>
 		<key>www/js/memo.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2h70Z9s84pjE25NXt0KYrf5Ounk=
+			N+4oaGlaLkjsew0FJ3TcddcDTTg=
 			</data>
 			<key>hash2</key>
 			<data>
-			a8Kwr42ojsMGs6TviPLMshF0tKtMEIBIFCbFwuy9ysI=
+			tDfqG+rYpLQoHbArAQSUAooCVEE6Do9G1LlU1md07wU=
 			</data>
 		</dict>
 		<key>www/js/menu1.js</key>
@@ -2429,11 +2489,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UphnMYtJiAb8mEUUsi8JEljv1/4=
+			EEPO9mcs8dzll0rwl0zO6Xm35lI=
 			</data>
 			<key>hash2</key>
 			<data>
-			gaKiyppkbkgabYccsJbfEMZ/nUGZkJKj1cLJXTJvcX0=
+			9NzdNEOcg+IAfUjkJ3LDFDa7Hx8fiSYbORBYPFk1NWE=
 			</data>
 		</dict>
 		<key>www/js/util/b64utils.js</key>
@@ -4977,6 +5037,17 @@
 			71fuLmfP2HfNSKVnoDSEsAwqejdxOKwbV9JTULmqYbQ=
 			</data>
 		</dict>
+		<key>www/plugins/code-push/script/acquisition-sdk.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RIOX1S+2u8pDGxIpwoM3DDauCCQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			+frdxu7DXtxvqgVOBmSmLHh/IDoqmgbefwhm/xGQlBI=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-camera/www/Camera.js</key>
 		<dict>
 			<key>hash</key>
@@ -5021,6 +5092,127 @@
 			+M+Og3e2du+I94HT47ZQ/sNHjeVhel4YuJl9Dy/bejo=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/codePush.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OWyqtbj5ryhQ5Ye+QkN/sGMvBnc=
+			</data>
+			<key>hash2</key>
+			<data>
+			VjPjIeOwuzzsIDcZ2L3TRrWKJNnWUb/p0MxtJaXaXR0=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/codePushUtil.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HDEtzeLAyolw4I3QBr+U4OhcCiY=
+			</data>
+			<key>hash2</key>
+			<data>
+			57jXWAn2L2511SuXA+1jKQbtuf0lSfbOY6tLW2Zu0II=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/fileUtil.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vcTZja0TdX49UaXG6COAZPsZmI8=
+			</data>
+			<key>hash2</key>
+			<data>
+			H29Uq6WRCzC48cGXaDja0bE9ZMlv4ILI+ItcxOrHLc4=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/httpRequester.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h1K4LsH8cuwD85wno94OQ13Iozw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZdvyfnKdvCMMpZqnlhhYQJdksHwiXJkmHRSEQUFbEUM=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/installMode.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yoNmBDWdom/f0UOJEp+IJzRXtQ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			bN/krTdPF3Z3wiRLrnOvERiM2+dbFVRwT+PHOsxja2k=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/localPackage.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			c+kl+gCkdyVokANfA7H/+VKG8YU=
+			</data>
+			<key>hash2</key>
+			<data>
+			tPUNjwkxHkDr1nG1p4Nkcjmm900Crf3ZA0TXlwGTYFY=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/nativeAppInfo.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y3BY5mygHGABbwVfxhhthivBOX4=
+			</data>
+			<key>hash2</key>
+			<data>
+			QA49Y8tqEpLK9s6lHR+JkiA0TvhAkBr1nneiq1A+bvQ=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/package.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fod4qmsHaW5PpWFw8Q1k2aTDS60=
+			</data>
+			<key>hash2</key>
+			<data>
+			iZiWUlL9m4AdqiJ3BjNqEEj1gM1PzQQQq4Azxu/TMi4=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/remotePackage.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7IJrAKAY59/5GnnSzDQ3+nItfME=
+			</data>
+			<key>hash2</key>
+			<data>
+			mf1Qlrfjs869ukGi0gfnAgo3RsNsj8gHOJa9QAQT6ms=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/sdk.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			05rUAWr3Rg1D8GQPwBCtdkybbRk=
+			</data>
+			<key>hash2</key>
+			<data>
+			a9OpPXv0Imvn0D36ptSLlhe3GuFrz/tAChjlKYpdkuo=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-code-push/bin/www/syncStatus.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eN69I0j7uFNMxmTbNE1EjQgLzKc=
+			</data>
+			<key>hash2</key>
+			<data>
+			yx3GEkv1R6WU4vcoAIJ8KnUjCnsGPhmUc5g6Hjpbyow=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<dict>
 			<key>hash</key>
@@ -5041,6 +5233,28 @@
 			<key>hash2</key>
 			<data>
 			MTtx20AIWCwuND9bebwdwG7KZ69o0ZdZwHIujxB7YCI=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransfer.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+oP039n6GJu1fs54+QP0yTJsiHA=
+			</data>
+			<key>hash2</key>
+			<data>
+			1mh8C5v7iDTA3qbj8mRKN1MhQebztsZibqmUAup9JwI=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransferError.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CwhFDysdKn06qN1rH2TPGUOpb8U=
+			</data>
+			<key>hash2</key>
+			<data>
+			l6Wd0RV/WgmPpmcn0UxoM30y2N2qNzTKAS4MD+MCUpc=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
@@ -5327,6 +5541,17 @@
 			<key>hash2</key>
 			<data>
 			c0FvNwJUoj6DTFiJbDJ//4pUO/Nc0Pmmq+lh9eVocuE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-zip/zip.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Xc5zQqEDKOGmgElLM6ZuOIUg5ww=
+			</data>
+			<key>hash2</key>
+			<data>
+			Bzx+9kp2/s4i7xlt3eA6M4xERbGXloYZL9mpN3dkGy4=
 			</data>
 		</dict>
 		<key>www/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js</key>

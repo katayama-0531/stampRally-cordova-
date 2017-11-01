@@ -3,10 +3,8 @@ app.controller('tab2Ctr', function($scope, $timeout, $element) {
     //メモ画面のコントローラー
     save.disabled = true;
     memoListCreate($scope);
-    console.log(memoListItem);
     
     $scope.listTouch = function(arg) {
-        console.log(memoListItem.length);
         var itemNum = arg.substr(8);
         var options = {
             data: [itemNum, memoListItem[itemNum]]

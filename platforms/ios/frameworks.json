@@ -7,5 +7,6 @@
     "libiconv.dylib": 1,
     "CoreVideo.framework": 1,
     "QuartzCore.framework": 1,
-    "CoreImage.framework": 1
+    "CoreImage.framework": 1,
+    "libz.dylib": 1
 }

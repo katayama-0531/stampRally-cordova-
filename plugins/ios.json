@@ -31,10 +31,22 @@
     },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-code-push": {
+      "PACKAGE_NAME": "com.example.stampRally"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "code-push": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-zip": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   }

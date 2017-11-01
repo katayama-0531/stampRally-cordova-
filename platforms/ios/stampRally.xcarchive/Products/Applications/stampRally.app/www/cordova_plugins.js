@@ -260,6 +260,114 @@ module.exports = [
       "cordova"
     ],
     "runs": true
+  },
+  {
+    "id": "code-push.AcquisitionManager",
+    "file": "plugins/code-push/script/acquisition-sdk.js",
+    "pluginId": "code-push",
+    "merges": [
+      "window"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransferError",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransferError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransfer",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransfer"
+    ]
+  },
+  {
+    "id": "cordova-plugin-zip.Zip",
+    "file": "plugins/cordova-plugin-zip/zip.js",
+    "pluginId": "cordova-plugin-zip",
+    "clobbers": [
+      "zip"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.codePush",
+    "file": "plugins/cordova-plugin-code-push/bin/www/codePush.js",
+    "pluginId": "cordova-plugin-code-push",
+    "clobbers": [
+      "codePush"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.localPackage",
+    "file": "plugins/cordova-plugin-code-push/bin/www/localPackage.js",
+    "pluginId": "cordova-plugin-code-push",
+    "clobbers": [
+      "LocalPackage"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.remotePackage",
+    "file": "plugins/cordova-plugin-code-push/bin/www/remotePackage.js",
+    "pluginId": "cordova-plugin-code-push",
+    "clobbers": [
+      "RemotePackage"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.syncStatus",
+    "file": "plugins/cordova-plugin-code-push/bin/www/syncStatus.js",
+    "pluginId": "cordova-plugin-code-push",
+    "clobbers": [
+      "SyncStatus"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.installMode",
+    "file": "plugins/cordova-plugin-code-push/bin/www/installMode.js",
+    "pluginId": "cordova-plugin-code-push",
+    "clobbers": [
+      "InstallMode"
+    ]
+  },
+  {
+    "id": "cordova-plugin-code-push.codePushUtil",
+    "file": "plugins/cordova-plugin-code-push/bin/www/codePushUtil.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-code-push.fileUtil",
+    "file": "plugins/cordova-plugin-code-push/bin/www/fileUtil.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-code-push.httpRequester",
+    "file": "plugins/cordova-plugin-code-push/bin/www/httpRequester.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-code-push.nativeAppInfo",
+    "file": "plugins/cordova-plugin-code-push/bin/www/nativeAppInfo.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-code-push.package",
+    "file": "plugins/cordova-plugin-code-push/bin/www/package.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-code-push.sdk",
+    "file": "plugins/cordova-plugin-code-push/bin/www/sdk.js",
+    "pluginId": "cordova-plugin-code-push",
+    "runs": true
   }
 ];
 module.exports.metadata = 
@@ -272,7 +380,11 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.6",
   "phonegap-plugin-barcodescanner": "7.0.0",
   "cordova-plugin-geolocation": "2.4.3",
-  "cordova-plugin-file": "4.3.3"
+  "cordova-plugin-file": "4.3.3",
+  "code-push": "2.0.1-beta",
+  "cordova-plugin-file-transfer": "1.6.3",
+  "cordova-plugin-zip": "3.1.0",
+  "cordova-plugin-code-push": "1.9.8-beta"
 };
 // BOTTOM OF METADATA
 });

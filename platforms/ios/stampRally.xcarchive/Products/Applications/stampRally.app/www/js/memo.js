@@ -1,7 +1,6 @@
 app.controller('memoCtr', function($scope) {
     //メモ詳細画面のコントローラー
     var options = $scope.navi.topPage.data;
-
     memoTitle.innerText = options[1].dataTime;
     description.innerText = options[1].memo;
 

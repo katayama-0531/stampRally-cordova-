@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-camera","cordova-plugin-compat","cordova-plugin-dialogs","cordova-plugin-device","phonegap-plugin-barcodescanner","cordova-plugin-geolocation","cordova-plugin-file"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-camera","cordova-plugin-compat","cordova-plugin-dialogs","cordova-plugin-device","phonegap-plugin-barcodescanner","cordova-plugin-geolocation","cordova-plugin-file","cordova-plugin-code-push","code-push","cordova-plugin-file-transfer","cordova-plugin-zip","cordova-plugin-wkwebview-engine"]}

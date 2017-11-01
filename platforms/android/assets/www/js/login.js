@@ -14,12 +14,12 @@ app.controller('AppController', function($scope, $http, $timeout) {
         module.config(function($httpProvider) {
             $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;application/json;charset=utf-8';
         });
-        login(id, $http);
     };
 
     document.addEventListener("deviceready", function() {
-        console.log(navigator.camera);
-    }, false);
+        codePush.sync();
+        login(id, $http);
+    });
 });
 
 function login(id, $http) {
@@ -47,8 +47,9 @@ function login(id, $http) {
         }
     }).
     error(function(data, status) {
-        ons.notification.alert({ message: "エラーが発生しました。", title: "エラー", cancelable: true });
-        console.log(data);
+        ons.notification.alert({ message: "ログイン中にエラーが発生しました。", title: "エラー", cancelable: true });
+        console.log("エラー：".data);
+        console.log("ステータス：".status);
         retry();
     });
 }

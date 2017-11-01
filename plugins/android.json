@@ -7,27 +7,40 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.example.stampRally"
-    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "cordova-plugin-dialogs": {
+    "cordova-plugin-code-push": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "phonegap-plugin-barcodescanner": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "code-push": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-zip": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    }
+  }
 }

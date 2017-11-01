@@ -1,0 +1,186 @@
+Node version: v8.8.1
+
+Cordova version: 7.1.0
+
+Config.xml file: 
+
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.stampRally" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>stampRally</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <preference name="CodePushDeploymentKey" value="nPbZ7ufU2LCZP-NoYUKCHkp4Dl6gd69e89bc-3888-4ff0-8b7f-cab5ac7753aa" />
+        </feature>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
+        <preference name="CodePushDeploymentKey" value="nPbZ7ufU2LCZP-NoYUKCHkp4Dl6gd69e89bc-3888-4ff0-8b7f-cab5ac7753aa" />
+    </platform>
+    <access origin="http://maps.google.com" subdomains="true" />
+    <access origin="http://googleapis.com" subdomains="true" />
+    <access origin="http://gstatic.com" subdomains="true" />
+    <access origin="http://japan-izm.com" subdomains="true" />
+    <access origin="https://codepush.azurewebsites.net" subdomains="true" />
+    <access orogin="https://codepush.blob.core.windows.net" subdomains="true" />
+    <engine name="android" spec="^6.3.0" />
+    <engine name="ios" spec="^4.5.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="cordova-plugin-camera" spec="^2.4.1">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-dialogs" spec="^1.3.3" />
+    <plugin name="cordova-plugin-device" spec="^1.1.6" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^7.0.0">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="cordova-plugin-file" spec="^4.3.3" />
+    <plugin name="cordova-plugin-code-push" spec="^1.9.8-beta" />
+</widget>
+
+
+Plugins: 
+
+code-push,cordova-plugin-camera,cordova-plugin-code-push,cordova-plugin-compat,cordova-plugin-device,cordova-plugin-dialogs,cordova-plugin-file,cordova-plugin-file-transfer,cordova-plugin-geolocation,cordova-plugin-whitelist,cordova-plugin-zip,phonegap-plugin-barcodescanner
+
+Android platform:
+
+*************************************************************************
+The "android" command is deprecated.
+For manual SDK, AVD, and project management, please use Android Studio.
+For command-line tools, use tools/bin/sdkmanager and tools/bin/avdmanager
+*************************************************************************
+Running /Users/ashira04/Library/Android/sdk/tools/bin/avdmanager list target
+
+Loading local repository...                                                     [=========                              ] 25% Loading local repository...       [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=======================================] 100% Fetch remote repository...       Available Android targets:
+----------
+id: 1 or "Google Inc.:Google APIs:21"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Google APIs, Android 21
+     Based on Android 5.0 (API level 21)
+     Libraries:
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+----------
+id: 2 or "android-21"
+     Name: Android API 21
+     Type: Platform
+     API level: 21
+     Revision: 2
+----------
+id: 3 or "Google Inc.:Google APIs:22"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Google APIs, Android 22
+     Based on Android 5.1 (API level 22)
+     Libraries:
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+----------
+id: 4 or "android-22"
+     Name: Android API 22
+     Type: Platform
+     API level: 22
+     Revision: 2
+----------
+id: 5 or "Google Inc.:Google APIs:23"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Google APIs, Android 23
+     Based on Android 6.0 (API level 23)
+     Libraries:
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+----------
+id: 6 or "android-23"
+     Name: Android API 23
+     Type: Platform
+     API level: 23
+     Revision: 3
+----------
+id: 7 or "Google Inc.:Google APIs:24"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Google APIs, Android 24
+     Based on Android 7.0 (API level 24)
+     Libraries:
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+----------
+id: 8 or "android-24"
+     Name: Android API 24
+     Type: Platform
+     API level: 24
+     Revision: 2
+----------
+id: 9 or "android-25"
+     Name: Android API 25
+     Type: Platform
+     API level: 25
+     Revision: 3
+----------
+id: 10 or "android-26"
+     Name: Android API 26
+     Type: Platform
+     API level: 26
+     Revision: 2
+----------
+id: 11 or "android-27"
+     Name: Android API 27
+     Type: Platform
+     API level: 27
+     Revision: 1
+
+iOS platform:
+
+Xcode 9.0.1
+Build version 9A1004
+

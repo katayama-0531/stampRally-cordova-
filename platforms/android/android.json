@@ -9,11 +9,19 @@
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+              "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"cdvfile:*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
               "count": 1
             },
             {
@@ -25,19 +33,21 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<allow-navigation href=\"cdvfile:*\" />",
+              "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
+              "count": 1
+            }
+          ],
+          "/widget": [
+            {
+              "xml": "<feature name=\"Zip\"><param name=\"android-package\" value=\"org.apache.cordova.Zip\" /></feature>",
               "count": 1
             }
           ]
@@ -48,7 +58,7 @@
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 2
+              "count": 3
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
@@ -94,14 +104,33 @@
             }
           ]
         }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"CodePush\"><param name=\"android-package\" value=\"com.microsoft.cordova.CodePush\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
       }
     }
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "code-push": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-zip": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-dialogs": {
@@ -110,18 +139,29 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "phonegap-plugin-barcodescanner": {
+    "cordova-plugin-code-push": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },
   "dependent_plugins": {},
   "modules": [
+    {
+      "id": "code-push.AcquisitionManager",
+      "file": "plugins/code-push/script/acquisition-sdk.js",
+      "pluginId": "code-push",
+      "merges": [
+        "window"
+      ]
+    },
     {
       "id": "cordova-plugin-camera.Camera",
       "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
@@ -153,52 +193,6 @@
       "clobbers": [
         "CameraPopoverHandle"
       ]
-    },
-    {
-      "id": "cordova-plugin-dialogs.notification",
-      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-      "pluginId": "cordova-plugin-dialogs",
-      "merges": [
-        "navigator.notification"
-      ]
-    },
-    {
-      "id": "cordova-plugin-dialogs.notification_android",
-      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-      "pluginId": "cordova-plugin-dialogs",
-      "merges": [
-        "navigator.notification"
-      ]
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
-      ]
-    },
-    {
-      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
-      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-      "pluginId": "phonegap-plugin-barcodescanner",
-      "clobbers": [
-        "cordova.plugins.barcodeScanner"
-      ]
-    },
-    {
-      "id": "cordova-plugin-geolocation.geolocation",
-      "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
-      "pluginId": "cordova-plugin-geolocation",
-      "clobbers": [
-        "navigator.geolocation"
-      ]
-    },
-    {
-      "id": "cordova-plugin-geolocation.PositionError",
-      "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-      "pluginId": "cordova-plugin-geolocation",
-      "runs": true
     },
     {
       "id": "cordova-plugin-file.DirectoryEntry",
@@ -372,15 +366,165 @@
         "cordova"
       ],
       "runs": true
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransferError",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransferError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransfer",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransfer"
+      ]
+    },
+    {
+      "id": "cordova-plugin-zip.Zip",
+      "file": "plugins/cordova-plugin-zip/zip.js",
+      "pluginId": "cordova-plugin-zip",
+      "clobbers": [
+        "zip"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification_android",
+      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.codePush",
+      "file": "plugins/cordova-plugin-code-push/bin/www/codePush.js",
+      "pluginId": "cordova-plugin-code-push",
+      "clobbers": [
+        "codePush"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.localPackage",
+      "file": "plugins/cordova-plugin-code-push/bin/www/localPackage.js",
+      "pluginId": "cordova-plugin-code-push",
+      "clobbers": [
+        "LocalPackage"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.remotePackage",
+      "file": "plugins/cordova-plugin-code-push/bin/www/remotePackage.js",
+      "pluginId": "cordova-plugin-code-push",
+      "clobbers": [
+        "RemotePackage"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.syncStatus",
+      "file": "plugins/cordova-plugin-code-push/bin/www/syncStatus.js",
+      "pluginId": "cordova-plugin-code-push",
+      "clobbers": [
+        "SyncStatus"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.installMode",
+      "file": "plugins/cordova-plugin-code-push/bin/www/installMode.js",
+      "pluginId": "cordova-plugin-code-push",
+      "clobbers": [
+        "InstallMode"
+      ]
+    },
+    {
+      "id": "cordova-plugin-code-push.codePushUtil",
+      "file": "plugins/cordova-plugin-code-push/bin/www/codePushUtil.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-code-push.fileUtil",
+      "file": "plugins/cordova-plugin-code-push/bin/www/fileUtil.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-code-push.httpRequester",
+      "file": "plugins/cordova-plugin-code-push/bin/www/httpRequester.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-code-push.nativeAppInfo",
+      "file": "plugins/cordova-plugin-code-push/bin/www/nativeAppInfo.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-code-push.package",
+      "file": "plugins/cordova-plugin-code-push/bin/www/package.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-code-push.sdk",
+      "file": "plugins/cordova-plugin-code-push/bin/www/sdk.js",
+      "pluginId": "cordova-plugin-code-push",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-geolocation.geolocation",
+      "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "clobbers": [
+        "navigator.geolocation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-geolocation.PositionError",
+      "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+      "pluginId": "cordova-plugin-geolocation",
+      "runs": true
+    },
+    {
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.2",
+    "code-push": "2.0.1-beta",
     "cordova-plugin-camera": "2.4.1",
+    "cordova-plugin-file": "4.3.3",
+    "cordova-plugin-file-transfer": "1.6.3",
+    "cordova-plugin-zip": "3.1.0",
     "cordova-plugin-dialogs": "1.3.3",
     "cordova-plugin-device": "1.1.6",
-    "phonegap-plugin-barcodescanner": "7.0.0",
+    "cordova-plugin-code-push": "1.9.8-beta",
     "cordova-plugin-geolocation": "2.4.3",
-    "cordova-plugin-file": "4.3.3"
+    "cordova-plugin-whitelist": "1.3.2",
+    "phonegap-plugin-barcodescanner": "7.0.0"
   }
 }
