@@ -17,7 +17,6 @@ app.controller('AppController', function($scope, $http, $timeout) {
     };
 
     document.addEventListener("deviceready", function() {
-        codePush.sync();
         login(id, $http);
     });
 });

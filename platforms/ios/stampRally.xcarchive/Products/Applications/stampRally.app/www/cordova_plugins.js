@@ -368,6 +368,15 @@ module.exports = [
     "file": "plugins/cordova-plugin-code-push/bin/www/sdk.js",
     "pluginId": "cordova-plugin-code-push",
     "runs": true
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -384,7 +393,8 @@ module.exports.metadata =
   "code-push": "2.0.1-beta",
   "cordova-plugin-file-transfer": "1.6.3",
   "cordova-plugin-zip": "3.1.0",
-  "cordova-plugin-code-push": "1.9.8-beta"
+  "cordova-plugin-code-push": "1.9.8-beta",
+  "cordova-plugin-inappbrowser": "1.7.1"
 };
 // BOTTOM OF METADATA
 });

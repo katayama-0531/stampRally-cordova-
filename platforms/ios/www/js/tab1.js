@@ -1,9 +1,7 @@
 app.controller('tab1Ctr', function($scope) {
     //タブ1画面のコントローラー
-    var browserUrl;
-    $scope.linkFrameClick = function() {
-        browserUrl = 0;
-    }
+    var browserUrl = linkFrame.scr;
+    console.log("URL:".browserUrl);
     linkFrame.onload = function() {
         if (device.platform == "Android") {
             linkFrame.contentDocument.addEventListener('touchend', function(e) {

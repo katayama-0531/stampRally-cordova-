@@ -43,6 +43,10 @@
             {
               "xml": "<feature name=\"CodePush\"><param name=\"ios-package\" value=\"CodePush\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+              "count": 1
             }
           ],
           "/widget": [
@@ -120,6 +124,9 @@
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-code-push": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },
@@ -493,6 +500,15 @@
       "file": "plugins/cordova-plugin-code-push/bin/www/sdk.js",
       "pluginId": "cordova-plugin-code-push",
       "runs": true
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -507,6 +523,7 @@
     "code-push": "2.0.1-beta",
     "cordova-plugin-file-transfer": "1.6.3",
     "cordova-plugin-zip": "3.1.0",
-    "cordova-plugin-code-push": "1.9.8-beta"
+    "cordova-plugin-code-push": "1.9.8-beta",
+    "cordova-plugin-inappbrowser": "1.7.1"
   }
 }

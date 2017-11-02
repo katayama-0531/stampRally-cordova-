@@ -34,6 +34,9 @@
     },
     "cordova-plugin-code-push": {
       "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.example.stampRally"
     }
   },
   "dependent_plugins": {

@@ -45,6 +45,9 @@
         <param name="ios-package" value="CodePush" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <feature name="Zip">
         <param name="ios-package" value="ZipPlugin" />
     </feature>
@@ -56,17 +59,19 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
     <access origin="http://maps.google.com" subdomains="true" />
     <access origin="http://googleapis.com" subdomains="true" />
     <access origin="http://gstatic.com" subdomains="true" />
     <access origin="http://japan-izm.com" subdomains="true" />
+    <access origin="*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
