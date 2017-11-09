@@ -31,6 +31,8 @@ import org.apache.cordova.LOG;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.net.ContentHandler;
+
 import javax.security.auth.callback.Callback;
 
 public class Geolocation extends CordovaPlugin {
@@ -100,6 +102,7 @@ public class Geolocation extends CordovaPlugin {
     public void requestPermissions(int requestCode)
     {
         PermissionHelper.requestPermissions(this, requestCode, permissions);
+
     }
 
 

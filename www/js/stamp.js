@@ -11,7 +11,7 @@ app.controller('stampCtr', function($scope, $http) {
         lodingIcon.style.visibility = "visible";
         gpsButton.innerHTML = "現在位置取得中";
         //現在位置取得ボタンタップ時
-        getGps($http);
+       getGps($http);
     }
 
     stampPage.addEventListener("hide", function() {
