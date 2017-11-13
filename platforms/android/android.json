@@ -47,6 +47,10 @@
             {
               "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"androidgps\"><param name=\"android-package\" value=\"plugin.androidgps.AndroidGps\" /></feature>",
+              "count": 1
             }
           ],
           "/widget": [
@@ -105,6 +109,22 @@
             {
               "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
               "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_UPDATES\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
             }
           ]
         }
@@ -156,6 +176,9 @@
       "PACKAGE_NAME": "com.example.stampRally"
     },
     "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-androidgps": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },
@@ -528,6 +551,14 @@
         "cordova.InAppBrowser.open",
         "window.open"
       ]
+    },
+    {
+      "id": "cordova-plugin-androidgps.androidgps",
+      "file": "plugins/cordova-plugin-androidgps/www/androidgps.js",
+      "pluginId": "cordova-plugin-androidgps",
+      "clobbers": [
+        "androidgps"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -542,6 +573,7 @@
     "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-whitelist": "1.3.2",
     "phonegap-plugin-barcodescanner": "7.0.0",
-    "cordova-plugin-inappbrowser": "1.7.1"
+    "cordova-plugin-inappbrowser": "1.7.1",
+    "cordova-plugin-androidgps": "0.0.1"
   }
 }

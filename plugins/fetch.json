@@ -102,5 +102,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-androidgps": {
+    "source": {
+      "type": "local",
+      "path": "/Users/ashira04/Documents/WorkSpace/stampRallyCordova/node_modules/androidgps"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

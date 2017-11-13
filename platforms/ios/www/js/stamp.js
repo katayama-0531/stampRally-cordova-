@@ -10,8 +10,18 @@ app.controller('stampCtr', function($scope, $http) {
     $scope.getGps = function() {
         lodingIcon.style.visibility = "visible";
         gpsButton.innerHTML = "現在位置取得中";
+        //android専用高度取得プラグイン呼び出し
+        androidgps.getLocation('', success, error);
         //現在位置取得ボタンタップ時
-        getGps($http);
+       //getGps($http);
+    }
+
+    function success(jsonArray){
+        console.log(jsonArray);
+    }
+
+    function error (message){
+        console.log(message);
     }
 
     stampPage.addEventListener("hide", function() {

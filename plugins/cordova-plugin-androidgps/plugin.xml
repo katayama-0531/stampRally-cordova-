@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-androidgps" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AndroidGps</name>
+    <js-module name="androidgps" src="www/androidgps.js">
+        <clobbers target="androidgps" />
+    </js-module>
+
+    <!-- Android用の設定 -->
+  <platform name="android">
+    <!-- Androidのconfig.xmlはここ→project/platform/android/res/xml/config.xmlにあるのでそこに反映するように -->
+    <config-file target="res/xml/config.xml" parent="/*">
+      <!-- Cordovaはfeatureタグをみて、どのプラグインが有効か見る。以下の情報が上記のファイルに追加される。 -->
+      <feature name="androidgps">
+        <param name="android-package" value="plugin.androidgps.AndroidGps"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+            <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    </config-file>
+    <!-- Javaのソースファイル。 target-dir: ファイルがコンパイルされるべき場所 -->
+    <source-file src="src/com/example/android/gps/AndroidGps.java" target-dir="src/plugin/androidgps/"/>
+  </platform>
+</plugin>
