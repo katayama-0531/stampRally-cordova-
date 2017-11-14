@@ -129,7 +129,10 @@
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "cordova-plugin-androidgps": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-androidGps": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },
@@ -514,11 +517,19 @@
       ]
     },
     {
-      "id": "cordova-plugin-androidgps.androidgps",
-      "file": "plugins/cordova-plugin-androidgps/www/androidgps.js",
-      "pluginId": "cordova-plugin-androidgps",
+      "id": "cordova-plugin-android-permissions.Permissions",
+      "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
+      "pluginId": "cordova-plugin-android-permissions",
       "clobbers": [
-        "androidgps"
+        "cordova.plugins.permissions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-androidGps.androidGps",
+      "file": "plugins/cordova-plugin-androidGps/www/androidGps.js",
+      "pluginId": "cordova-plugin-androidGps",
+      "clobbers": [
+        "androidGps"
       ]
     }
   ],
@@ -536,6 +547,7 @@
     "cordova-plugin-zip": "3.1.0",
     "cordova-plugin-code-push": "1.9.8-beta",
     "cordova-plugin-inappbrowser": "1.7.1",
-    "cordova-plugin-androidgps": "0.0.1"
+    "cordova-plugin-android-permissions": "1.0.0",
+    "cordova-plugin-androidGps": "0.0.1"
   }
 }

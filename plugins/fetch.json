@@ -103,7 +103,23 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-androidgps": {
+  "cordova-plugin-android-permissions": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-android-permissions"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-console": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-console"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-androidGps": {
     "source": {
       "type": "local",
       "path": "/Users/ashira04/Documents/WorkSpace/stampRallyCordova/node_modules/androidgps"

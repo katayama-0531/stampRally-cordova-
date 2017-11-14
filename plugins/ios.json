@@ -38,7 +38,10 @@
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.stampRally"
     },
-    "cordova-plugin-androidgps": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.example.stampRally"
+    },
+    "cordova-plugin-androidGps": {
       "PACKAGE_NAME": "com.example.stampRally"
     }
   },

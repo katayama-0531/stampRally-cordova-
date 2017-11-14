@@ -41,8 +41,8 @@ function login(id, $http) {
             navi.replacePage("html/menu.html");
         } else {
             ons.notification.alert({ message: "ログインできませんでした。", title: "エラー", cancelable: true });
-            console.log(data);
-            retry();
+            cog(data);
+            retry();onsole.l
         }
     }).
     error(function(data, status) {

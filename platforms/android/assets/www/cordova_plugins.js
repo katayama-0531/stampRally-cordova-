@@ -369,11 +369,19 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-androidgps.androidgps",
-    "file": "plugins/cordova-plugin-androidgps/www/androidgps.js",
-    "pluginId": "cordova-plugin-androidgps",
+    "id": "cordova-plugin-android-permissions.Permissions",
+    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+    "pluginId": "cordova-plugin-android-permissions",
     "clobbers": [
-      "androidgps"
+      "cordova.plugins.permissions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-androidGps.androidGps",
+    "file": "plugins/cordova-plugin-androidGps/www/androidGps.js",
+    "pluginId": "cordova-plugin-androidGps",
+    "clobbers": [
+      "androidGps"
     ]
   }
 ];
@@ -392,7 +400,9 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.2",
   "phonegap-plugin-barcodescanner": "7.0.0",
   "cordova-plugin-inappbrowser": "1.7.1",
-  "cordova-plugin-androidgps": "0.0.1"
+  "cordova-plugin-android-permissions": "1.0.0",
+  "cordova-plugin-console": "1.1.0",
+  "cordova-plugin-androidGps": "0.0.1"
 };
 // BOTTOM OF METADATA
 });

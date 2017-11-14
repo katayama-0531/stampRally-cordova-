@@ -1,9 +1,7 @@
 package com.example.android.gps;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
@@ -11,7 +9,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
@@ -34,10 +31,8 @@ public class AndroidGps extends CordovaPlugin {
     private static LocationManager mLocationManager;
     private static PowerManager.WakeLock wakelock;
     private Context context;
-    private int REQUEST_CODE_LOCATION = 0x01;
-
-    String[] permissions = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
-
+    java.util.Timer timer;
+    String msg = "";
 
     /**
      * コンストラクタ（プラグイン時）
@@ -85,14 +80,11 @@ public class AndroidGps extends CordovaPlugin {
      */
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        String msg = "";
 
         if (action.equals("getLocation")) {
             mLocationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
             // 位置情報機能非搭載端末の場合
             if (mLocationManager == null) {
-                Log.i(null, "位置情報機能非搭載端末で実行");
-
                 msg = "位置情報機能非搭載端末です。";
             }
 
@@ -100,7 +92,6 @@ public class AndroidGps extends CordovaPlugin {
             criteria.setAltitudeRequired(true);
             criteria.setPowerRequirement(Criteria.POWER_LOW);
             String provider = mLocationManager.getBestProvider(criteria, true);
-            Log.i(null, "位置情報取得開始" + provider);
 
             // 初期化時．PARTIAL_WAKE_LOCKの準備をする
             PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
@@ -109,74 +100,53 @@ public class AndroidGps extends CordovaPlugin {
             // GPS使用開始時．PARTIAL_WAKE_LOCKを取得する
             wakelock.acquire();
 
-            // 表示しているActivityの取得
-            //Activity activity = cordova.getActivity();
-
             int fineLocation = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION);
             int coarseLocation = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION);
             if (fineLocation != PackageManager.PERMISSION_GRANTED && coarseLocation != PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this.cordova.getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION)){
-                   new AlertDialog.Builder(context).setTitle("パーミッション").setMessage("位置情報を使用するにはパーミッションが必要です。")
-                           .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                               @Override
-                               public void onClick(DialogInterface dialog, int which) {
-                                   ActivityCompat.requestPermissions(cordova.getActivity()
-                                           , new String[]{Manifest.permission.ACCESS_FINE_LOCATION}
-                                           ,REQUEST_CODE_LOCATION);
-                               }
-                           }).create()
-                           .show();
-                }
-
-                //権限を取得する
-                ActivityCompat.requestPermissions(this.cordova.getActivity()
-                        , new String[]{Manifest.permission.ACCESS_FINE_LOCATION}
-                        , REQUEST_CODE_LOCATION);
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return false;
             }
             mLocationManager.getLastKnownLocation(provider);
-
-            mLocationManager.requestLocationUpdates(provider, 1000, 1, new LocationListener() {
+            final LocationListener locationListener = new LocationListener() {
                 @Override
                 public void onLocationChanged(Location location) {
-                    Log.i("debug", "位置情報取得"+location);
 
                     mLocationManager.removeUpdates(this);
                     wakelock.release();
                     StringBuilder strB = new StringBuilder();
+                    timer.cancel();
 
-                    strB.append("Latitude:"+String.valueOf(location.getLatitude()));
-                    strB.append("Longitude:"+String.valueOf(location.getLongitude()));
-                    strB.append("Accuracy:"+String.valueOf(location.getAccuracy()));
+                    strB.append("latitude:"+String.valueOf(location.getLatitude()));
+                    strB.append(",longitude:"+String.valueOf(location.getLongitude()));
+                    strB.append(",altitude:"+String.valueOf(location.getAltitude()));
+                    strB.append(",accuracy:"+String.valueOf(location.getAccuracy()));
                     Log.i("debug", "コールバック"+callbackContext);
                     callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, strB.toString()));
                 }
 
                 @Override
-                public void onStatusChanged(String provider, int status, Bundle extras) {
-                    Log.i(null, "位置情報onStatusChanged:"+provider);
-
-                }
+                public void onStatusChanged(String provider, int status, Bundle extras) {}
 
                 @Override
-                public void onProviderEnabled(String provider) {
-                    Log.i(null, "位置情報取得"+provider);
-
-                }
+                public void onProviderEnabled(String provider) {}
 
                 @Override
-                public void onProviderDisabled(String provider) {
-                    Log.i(null, "位置情報onProviderEnabled:"+provider);
+                public void onProviderDisabled(String provider) {}
+            };
 
+            //タイムアウト処理
+            final java.util.TimerTask tt = new java.util.TimerTask() {
+                @Override
+                public void run() {
+                    mLocationManager.removeUpdates(locationListener);
+                    wakelock.release();
+                    msg += "位置情報の取得に時間がかかりすぎるため位置情報の取得をキャンセルしました。本体のGPSがONになっているか確認してください。";
+                    callbackContext.error(msg);
                 }
-            });
+            };
+            timer = new java.util.Timer(true);
+            timer.schedule(tt,(long)9000);//待ち時間。ここの数値を変更すれば待ち時間の変更ができる
+
+            mLocationManager.requestLocationUpdates(provider, 1000, 0, locationListener);
 
         } else {
             msg += "位置情報の取得に失敗しました。";

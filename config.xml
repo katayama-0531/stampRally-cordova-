@@ -56,5 +56,7 @@
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-code-push" spec="^1.9.8-beta" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
-    <plugin name="cordova-plugin-androidgps" spec="/Users/ashira04/Documents/WorkSpace/androidGps" />
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <plugin name="cordova-plugin-androidGps" spec="/Users/ashira04/Documents/WorkSpace/androidGps" />
 </widget>

@@ -43,7 +43,7 @@ app.controller('homeCtr', function($scope) {
 
         destroyItemScope: function(index, itemScope) {
             // Optional method that is called when an item is unloaded.
-            console.log('Item #' + (index + 1) + '削除');
+            //console.log('Item #' + (index + 1) + '削除');
         }
     };
 
