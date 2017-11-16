@@ -38,7 +38,7 @@ ons-carousel-item {
     margin: 0;
     width: 100%;
     height: 80%;
-    overflow: auto;
+    overflow:scroll;
 }
 
 /*メモ画面のテキストエリア*/

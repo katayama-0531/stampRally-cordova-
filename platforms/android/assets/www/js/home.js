@@ -24,6 +24,8 @@ app.controller('homeCtr', function($scope) {
         }, null, null);
     }
 
+    //push通知入れるとしたらこの辺り
+
     // 無限リストサンプル
     $scope.MyDelegate = {
         configureItemScope: function(index, itemScope) {
@@ -33,17 +35,12 @@ app.controller('homeCtr', function($scope) {
 
         countItems: function() {
             // Return number of items.
-            return 1000000;
+            return 10000;
         },
 
         calculateItemHeight: function(index) {
             // Return the height of an item in pixels.
-            return 44;
-        },
-
-        destroyItemScope: function(index, itemScope) {
-            // Optional method that is called when an item is unloaded.
-            //console.log('Item #' + (index + 1) + '削除');
+            return ons.platform.isAndroid() ? 48 : 44;
         }
     };
 

@@ -10,8 +10,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -20,6 +22,9 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ashira04 on 2017/11/09.
@@ -66,7 +71,6 @@ public class AndroidGps extends CordovaPlugin {
      * 初期化
      */
     private void init() {
-        Log.i(null, "カスタムプラグイン初期化");
     }
 
     /**
@@ -92,7 +96,7 @@ public class AndroidGps extends CordovaPlugin {
             criteria.setAltitudeRequired(true);
             criteria.setPowerRequirement(Criteria.POWER_LOW);
             String provider = mLocationManager.getBestProvider(criteria, true);
-
+            
             // 初期化時．PARTIAL_WAKE_LOCKの準備をする
             PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
             wakelock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, this.getClass().getName());
@@ -110,17 +114,25 @@ public class AndroidGps extends CordovaPlugin {
                 @Override
                 public void onLocationChanged(Location location) {
 
+                    timer.cancel();
                     mLocationManager.removeUpdates(this);
                     wakelock.release();
-                    StringBuilder strB = new StringBuilder();
-                    timer.cancel();
 
-                    strB.append("latitude:"+String.valueOf(location.getLatitude()));
-                    strB.append(",longitude:"+String.valueOf(location.getLongitude()));
-                    strB.append(",altitude:"+String.valueOf(location.getAltitude()));
-                    strB.append(",accuracy:"+String.valueOf(location.getAccuracy()));
-                    Log.i("debug", "コールバック"+callbackContext);
-                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, strB.toString()));
+                    Map<String,Object> map = new HashMap<>();
+                    map.put("latitude", location.getLatitude());
+                    map.put("longitude", location.getLongitude());
+                    map.put("altitude", location.getAltitude());
+                    map.put("accuracy", location.getAccuracy());
+
+                    ObjectMapper mapper = new ObjectMapper();
+
+                    String json = new String();
+                    try {
+                        json = mapper.writeValueAsString(map);
+                    } catch (JsonProcessingException e) {
+                        e.printStackTrace();
+                    }
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK,json));
                 }
 
                 @Override
@@ -135,23 +147,24 @@ public class AndroidGps extends CordovaPlugin {
 
             //タイムアウト処理
             final java.util.TimerTask tt = new java.util.TimerTask() {
+                android.os.Handler handler = new android.os.Handler();
                 @Override
                 public void run() {
                     mLocationManager.removeUpdates(locationListener);
                     wakelock.release();
-                    msg += "位置情報の取得に時間がかかりすぎるため位置情報の取得をキャンセルしました。本体のGPSがONになっているか確認してください。";
+                    msg = "位置情報の取得に時間がかかりすぎるため位置情報の取得をキャンセルしました。";
                     callbackContext.error(msg);
                 }
             };
             timer = new java.util.Timer(true);
-            timer.schedule(tt,(long)9000);//待ち時間。ここの数値を変更すれば待ち時間の変更ができる
+            timer.schedule(tt,(long)5000);
 
             mLocationManager.requestLocationUpdates(provider, 1000, 0, locationListener);
 
+
         } else {
-            msg += "位置情報の取得に失敗しました。";
+            msg = "位置情報の取得に失敗しました。";
             callbackContext.error(msg);
-            Log.w(null, msg);
             return false;
         }
 

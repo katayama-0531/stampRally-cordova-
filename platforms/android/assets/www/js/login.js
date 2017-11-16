@@ -42,7 +42,7 @@ function login(id, $http) {
         } else {
             ons.notification.alert({ message: "ログインできませんでした。", title: "エラー", cancelable: true });
             cog(data);
-            retry();onsole.l
+            retry();
         }
     }).
     error(function(data, status) {

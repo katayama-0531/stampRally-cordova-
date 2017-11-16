@@ -22,5 +22,9 @@
     </config-file>
     <!-- Javaのソースファイル。 target-dir: ファイルがコンパイルされるべき場所 -->
     <source-file src="src/com/example/android/gps/AndroidGps.java" target-dir="src/plugin/androidGps/"/>
+    <!--ライブラリもここで指定する-->
+    <resource-file src="src/com/example/android/jackson-annotations-2.9.0.jar" target="libs/jackson-annotations-2.9.0.jar"/>
+    <resource-file src="src/com/example/android/jackson-core-2.9.0.jar" target="libs/jackson-core-2.9.0.jar"/>
+    <resource-file src="src/com/example/android/jackson-databind-2.3.1.jar" target="libs/jackson-databind-2.3.1.jar"/>
   </platform>
 </plugin>

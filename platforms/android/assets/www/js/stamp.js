@@ -44,20 +44,15 @@ app.controller('stampCtr', function ($scope, $http) {
 
     var success = function (message){
         console.log("位置情報取得成功(android)");
-        var location = {};
-        var locationArray = message.split(',');
-        for (let index = 0; index < locationArray.length; index++) {
-            var locationObj = locationArray[index].split(':')
-            location[locationObj[0]] = locationObj[1];
-        }
+        var locations = JSON.parse(message);
 
         //この辺りで緯度、経度を送信する
         var id = localStorage.getItem('ID');
         var n = 6; // 小数点第n位まで残す
-        var latitude = Math.floor(location.latitude * Math.pow(10, n)) / Math.pow(10, n);
-        var longitude = Math.floor(location.longitude * Math.pow(10, n)) / Math.pow(10, n);
-        var altitude = Math.floor(location.altitude * Math.pow(10, n)) / Math.pow(10, n);
-        var accuracy = Math.floor(location.accuracy * Math.pow(10, n)) / Math.pow(10, n);
+        var latitude = Math.floor(locations.latitude * Math.pow(10, n)) / Math.pow(10, n);
+        var longitude = Math.floor(locations.longitude * Math.pow(10, n)) / Math.pow(10, n);
+        var altitude = Math.floor(locations.altitude * Math.pow(10, n)) / Math.pow(10, n);
+        var accuracy = Math.floor(locations.accuracy * Math.pow(10, n)) / Math.pow(10, n);
         //androidには高度の精度は無い
         var altitudeAccuracy = 0;
         var gpsData = {
