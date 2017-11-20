@@ -1,4 +1,5 @@
-var app = ons.bootstrap();
+ons.bootstrap(['app']);
+var app = angular.module('app',['onsen']);
 app.controller('AppController', function($scope, $http, $timeout) {
     //ログイン画面のコントローラー
     // メンバ
