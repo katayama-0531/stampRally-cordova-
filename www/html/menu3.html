@@ -1,10 +1,12 @@
 <ons-page ng-controller="menu3Ctr" id="menu3Page">
-        <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
-            <ons-carousel-item ons-lazy-repeat="imgItemListDelegate">
-                <div><img id="imgTest" src="{{imgScr}}"></div>
-            </ons-carousel-item>
-            <ons-carousel-cover>
-                <p class="cover-label">左右にスワイプしてください</p>
-            </ons-carousel-cover>
-        </ons-carousel>
+    <ons-carousel swipeable overscrollable auto-scroll fullscreen var="carousel">
+        <ons-carousel-item ons-lazy-repeat="imgItemListDelegate">
+            <div>
+                <img id="imgTest" src="{{imgScr}}">
+            </div>
+        </ons-carousel-item>
+        <ons-carousel-cover>
+            <p class="cover-label">左右にスワイプしてください。</p>
+        </ons-carousel-cover>
+    </ons-carousel>
 </ons-page>

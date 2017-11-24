@@ -1,5 +1,5 @@
 ons.bootstrap(['app']);
-var app = angular.module('app',['onsen']);
+var app = angular.module('app',['onsen.directives','ui.bootstrap']);
 app.controller('AppController', function($scope, $http, $timeout) {
     //ログイン画面のコントローラー
     // メンバ
@@ -10,9 +10,9 @@ app.controller('AppController', function($scope, $http, $timeout) {
     }
 
     $scope.loginInit = function() {
-        var module = angular.module('app', ['onsen.directives']);
+        //var module = angular.module('app', ['onsen.directives']);
         //ログインの通信の為の準備
-        module.config(function($httpProvider) {
+        app.config(function($httpProvider) {
             $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;application/json;charset=utf-8';
         });
     };
@@ -42,7 +42,7 @@ function login(id, $http) {
             navi.replacePage("html/menu.html");
         } else {
             ons.notification.alert({ message: "ログインできませんでした。", title: "エラー", cancelable: true });
-            cog(data);
+            console.log(data);
             retry();
         }
     }).

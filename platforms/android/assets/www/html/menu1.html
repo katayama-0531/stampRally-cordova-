@@ -5,10 +5,19 @@
             <ons-search-input placeholder="検索"></ons-search-input>
         </p>
         <ons-list>
-            <ons-list-header>チェックボックス</ons-list-header>
+            <ons-list-header>メニュー各種</ons-list-header>
+            <ons-list-item tappable>
+                    <input id="date" type="text" ng-model="current"
+                    ng-focus="onopen($event)"
+                    uib-datepicker-popup="yyyy-MM-dd" is-open="opened"
+                    current-text="今日" clear-text="クリア" close-text="閉じる" />
+                </ons-list-item>
+                <ons-list-header>チェックボックス</ons-list-header>                
             <ons-list-item tappable>
                 <label class="left">
-                    <ons-checkbox input-id="check-1" ng-model="page.apples"></ons-checkbox>
+                    <!--onsenuiの書き方では無駄なフォーカスが表示されてしまう-->
+                    <!--<ons-checkbox input-id="check-1" ng-model="page.apples"></ons-checkbox>-->
+                    <input input-id="check-1" type="checkbox" data-toggle="checkbox" value="りんご" ng-model="page.apples">
                 </label>
                 <label for="check-1" class="center">
                     リンゴ <span ng-show="page.apples" style="color: red; margin-left: 6px">♥</span>
@@ -24,18 +33,18 @@
             </ons-list-item>
             <ons-list-item tappable>
                 <label class="left">
-                    <ons-checkbox input-id="check-2" ng-model="page.greap"></ons-checkbox>
+                    <ons-checkbox input-id="check-3" ng-model="page.greap"></ons-checkbox>
                 </label>
                 <label for="check-3" class="center">
                     ブドウ <span ng-show="page.greap" style="color: red; margin-left: 6px">♥</span>
                 </label>
             </ons-list-item>
-        </ons-list>
-        <ons-list>
             <ons-list-header>ラジオボタン<span ng-style="page.labelStyle"></span></ons-list-header>
             <ons-list-item tappable>
                 <label class="left">
-                    <ons-radio name="color" input-id="radio-1" ng-model="page.labelStyle.backgroundColor" value="red"></ons-radio>
+                    <!--onsenuiの書き方では無駄なフォーカスが表示されてしまう-->
+                    <!--<ons-radio name="color" input-id="radio-1" ng-model="page.labelStyle.backgroundColor" value="red"></ons-radio>-->
+                    <input input-id="radio-1" type="radio" data-toggle="radio" value="red" ng-model="page.labelStyle.backgroundColor">
                 </label>
                 <label for="radio-1" class="center">
                     赤
@@ -51,9 +60,9 @@
             </ons-list-item>
             <ons-list-item tappable>
                 <label class="left">
-                    <ons-radio name="color" input-id="radio-3" ng-model="page.labelStyle.backgroundColor" value="blue"></ons-radio>
+                    <ons-radio name="color" input-id="radio-3" ng-model="page.labelStyle.backgroundColor" value="yellow"></ons-radio>
                 </label>
-                <label for="radio-2" class="center">
+                <label for="radio-3" class="center">
                     黄
                 </label>
             </ons-list-item>

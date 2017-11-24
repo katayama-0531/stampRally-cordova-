@@ -73,7 +73,6 @@ function memoListCreate($scope){
         //Jsonで保存されているのでパースする
         memoListItem = JSON.parse(localStorage.getItem('memo'));
     };
-    console.log(memoListItem);
 
     var itemCount = 0;
     $scope.ItemListDelegate = {
